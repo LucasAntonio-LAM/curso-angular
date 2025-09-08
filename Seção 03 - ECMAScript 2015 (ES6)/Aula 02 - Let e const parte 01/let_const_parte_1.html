@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste live server</title>
+</head>
+<body>
+
+
+    <script>
+        // Escopos: Global, função, bloco.
+        // console.log('Global: ', serie);
+        // var serie = 'The Big Bang Theory';
+
+        // function escopoFuncao() {
+        //     var serie2 = 'How I Met Your Mother';
+        //     console.log('Função: ', serie2);
+        // }
+
+        // if(true) {
+        //     console.log('Bloco: ', serie);
+        // }
+
+        // {
+        //     console.log('Bloco: ', serie);
+        // }
+        // escopoFuncao();
+
+       
+       
+
+        function escopoFuncao() {
+           
+            if(true) {
+                if(true) {
+                var serie = 'Game of Thrones';
+            }
+
+
+            console.log('Funcao: ', serie);
+        }
+        }
+
+
+        {
+         
+        }
+
+        escopoFuncao();
+    </script>
+</body>
+</html>
