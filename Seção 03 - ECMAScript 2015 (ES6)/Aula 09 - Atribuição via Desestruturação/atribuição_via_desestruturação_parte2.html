@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste live server</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // Destructuring assignment no contexto de objetos
+
+        let produto = {
+            descricao: 'Notebook',
+            preco: 2500,
+            detalhes: {
+                fabricante: 'ABC',
+                modelo: 'XYZ'
+            }
+        }
+
+        // token arrays = []
+        // token objects = {}
+
+        // let { descricao, preco } = produto
+        // console.log(descricao, preco)
+
+        // Nomear as variaveis com outros nomes
+        // let { descricao: d, preco: p } = produto
+        // console.log(d, p);
+
+        // Valores Default para lidar com atributos undefined
+        // let { descricao: d, preco: p = 0, desconto = 5 } = produto
+        // console.log(d, p, desconto);
+
+        // Extrair atributos de objetos pertencentes a atributos de objeto
+        // let { descricao, detalhes: { fabricante, modelo } } = produto
+        let { descricao, detalhes: { fabricante: f, modelo = 'Não informado' } } = produto
+        console.log(descricao, f, modelo)
+    </script>
+</body>
+</html>
