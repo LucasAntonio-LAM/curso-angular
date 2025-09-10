@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste live server</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // Destructuring no contexto de funções com arrays
+        let arr = [10, 20, 30, 40]
+
+        //function teste([ a, b ]) { // Desestruturando o array
+        // function teste([ a,b, ,c ]) { // Pular valores
+        function teste([ a,b, ,c, d = 100 ]) { // Parametros padrões
+            console.log(a, b, c, d)
+        }
+
+        // teste(arr[0], arr[1])
+        // teste(arr)
+
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40
+        }
+
+        //function teste2({ c, d }) {
+        // function teste2({ c, d: x }) { // Apelidos
+        function teste2({ c, d: x, t = 100 }) { // Parametros padrões
+            console.log(c,x,t)
+        }
+
+        // teste2(obj.a, obj.b)
+        teste2(obj)
+
+    </script>
+</body>
+</html>
