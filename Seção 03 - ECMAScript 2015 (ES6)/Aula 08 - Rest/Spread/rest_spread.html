@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste live server</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // Spread --> utilizado para expandir strings, arrays ou objetos.
+
+        // String
+        
+        let tituloArtigo = 'Como utilizar o operador Rest/Spread';
+
+        console.log(tituloArtigo);
+        console.log(...tituloArtigo);
+        console.log([...tituloArtigo]);
+        console.log({...tituloArtigo});
+
+        // Arrays
+        let listaCursos1 = ['nodejs e mongoDB', 'Angular'];
+        let listaCursos2 = ['Solid', 'Laravel'];
+        let listaCompletaCursos = ['Web Completo', 'Banco de Dados', ...listaCursos1, ...listaCursos2];
+
+        console.log(listaCompletaCursos);
+
+        // Objetos
+        let pessoa = {nome: 'Pedro', idade: '32'};
+        let cadastroCompleto = {endereco: 'Rua ABC', ...pessoa};
+
+        console.log(cadastroCompleto);
+    </script>
+</body>
+</html>
