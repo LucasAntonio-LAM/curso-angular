@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste live server</title>
+</head>
+<body>
+    <div id="teste"></div>
+
+    <script>
+        
+       function* testeGenerator() {
+            yield 'Teste 1'
+            yield 'Teste 2'
+            yield 'Teste 3'
+
+            return 'Teste 4'
+       }
+
+       let meuGenerator = testeGenerator() // Obj iterator
+       // console.log(meuGenerator)
+
+       console.log(meuGenerator.next())
+       console.log('=========')
+       console.log(meuGenerator.next())
+       console.log('=========')
+       console.log(meuGenerator.next())
+       console.log('=========')
+       console.log(meuGenerator.next())
+        
+    </script>
+</body>
+</html>
