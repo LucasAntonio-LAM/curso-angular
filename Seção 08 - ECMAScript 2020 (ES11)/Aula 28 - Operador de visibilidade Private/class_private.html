@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+        <script>
+
+            class Pessoa {
+
+                #humor = null
+
+                #mensagens = ['Seja feliz', 'Não estou para conversa hoje.']
+
+                constructor(nome) {
+                    this.#mudarHumor()
+                    this.nome = nome
+                }
+
+                dizerOi() {
+                    return `Olá, meu nome é ${this.nome}`
+                }
+
+                getHumor() {
+                    return this.#humor
+                }
+
+                #mudarHumor() {
+                    this.#humor = Math.floor(Math.random() * 2)
+                }
+
+                getMensagem() {
+                    return this.#mensagens[this.#humor]
+                }
+            }
+
+            let p = new Pessoa('Josè')
+            console.log(p.dizerOi())
+
+            //-- 
+            console.log(p.getMensagem())
+            
+
+        </script>
+</body>
+</html>
