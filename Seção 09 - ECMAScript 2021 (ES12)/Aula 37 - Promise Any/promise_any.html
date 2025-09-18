@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+        <script>
+
+            const p1 = new Promise((resolve, reject) => {
+                setTimeout(() => reject('p1 resolvida'), 3000)
+            })
+
+            const p2= new Promise((resolve, reject) => {
+                setTimeout(() => reject('p2 resolvida'), 5000)
+            })
+
+            const p3 = new Promise((resolve, reject) => {
+                setTimeout(() => reject('p3 resolvida'), 1000)
+            })
+
+            let promises = [p1,p2,p3]
+            Promise.any(promises) // Também é uma promise
+                .then((resolvida) => {
+                    console.log(resolvida)
+                })
+                .catch((erro) => {
+                    console.log(erro)
+                })
+
+        </script>
+</body>
+</html>
