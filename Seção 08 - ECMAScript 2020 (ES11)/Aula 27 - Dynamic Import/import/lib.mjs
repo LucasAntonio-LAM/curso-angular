@@ -3,7 +3,3 @@ export const saudacao = () => {
     return `Olá, seja muito bem-vindo. Hoje é ${data}`
 }
 
-export function getEnderecoByCep(cep) {
-    return fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        .then(response => response.json())
-}
