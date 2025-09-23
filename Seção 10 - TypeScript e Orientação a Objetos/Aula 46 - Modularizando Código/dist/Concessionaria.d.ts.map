@@ -1,0 +1,1 @@
+{"version":3,"file":"Concessionaria.d.ts","sourceRoot":"","sources":["../Concessionaria.ts"],"names":[],"mappings":"AAAA,OAAQ,KAAK,MAAO,SAAS,CAAA;AAG7B,MAAM,CAAC,OAAO,OAAO,cAAc;IAC/B,OAAO,CAAC,QAAQ,CAAQ;IACxB,OAAO,CAAC,aAAa,CAAS;gBAElB,QAAQ,EAAE,MAAM,EAAE,aAAa,EAAE,KAAK,EAAE;IAK7C,gBAAgB,IAAI,MAAM;IAI1B,oBAAoB,IAAI,KAAK,EAAE;CAGzC"}
