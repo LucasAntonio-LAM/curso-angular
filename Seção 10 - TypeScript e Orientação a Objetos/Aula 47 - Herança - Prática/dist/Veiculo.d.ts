@@ -1,6 +1,6 @@
 export default class Veiculo {
     protected modelo: string;
-    private velocidade;
+    protected velocidade: number;
     acelerar(): void;
     parar(): void;
     velocidadeAtual(): number;

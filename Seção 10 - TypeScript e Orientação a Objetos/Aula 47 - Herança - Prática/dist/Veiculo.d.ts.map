@@ -1,1 +1,1 @@
-{"version":3,"file":"Veiculo.d.ts","sourceRoot":"","sources":["../Veiculo.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,OAAO;IACxB,SAAS,CAAC,MAAM,EAAG,MAAM,CAAA;IACzB,OAAO,CAAC,UAAU,CAAY;IAEvB,QAAQ,IAAI,IAAI;IAIhB,KAAK,IAAI,IAAI;IAIb,eAAe,IAAI,MAAM;IAIzB,WAAW,IAAI,MAAM;CAG/B"}
+{"version":3,"file":"Veiculo.d.ts","sourceRoot":"","sources":["../Veiculo.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,OAAO,OAAO;IACxB,SAAS,CAAC,MAAM,EAAG,MAAM,CAAA;IACzB,SAAS,CAAC,UAAU,EAAE,MAAM,CAAI;IAEzB,QAAQ,IAAI,IAAI;IAIhB,KAAK,IAAI,IAAI;IAIb,eAAe,IAAI,MAAM;IAIzB,WAAW,IAAI,MAAM;CAG/B"}

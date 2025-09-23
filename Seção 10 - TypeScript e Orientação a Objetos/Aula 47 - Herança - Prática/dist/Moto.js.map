@@ -1,1 +1,1 @@
-{"version":3,"file":"Moto.js","sourceRoot":"","sources":["../Moto.ts"],"names":[],"mappings":";;;;;AAAA,wDAA+B;AAE/B,MAAM,IAAK,SAAQ,iBAAO;CAEzB;AAED,kBAAe,IAAI,CAAA"}
+{"version":3,"file":"Moto.js","sourceRoot":"","sources":["../Moto.ts"],"names":[],"mappings":";;;;;AAAA,wDAA+B;AAE/B,MAAM,IAAK,SAAQ,iBAAO;IACf,QAAQ;QACX,IAAI,CAAC,UAAU,GAAG,IAAI,CAAC,UAAU,GAAG,EAAE,CAAA;IAC1C,CAAC;CACJ;AAED,kBAAe,IAAI,CAAA"}
