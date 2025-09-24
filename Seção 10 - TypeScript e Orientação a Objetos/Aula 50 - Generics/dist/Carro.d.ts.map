@@ -1,0 +1,1 @@
+{"version":3,"file":"Carro.d.ts","sourceRoot":"","sources":["../Carro.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,WAAW,CAAA;AAE/B,MAAM,CAAC,OAAO,OAAO,KAAM,SAAQ,OAAO;IACtC,OAAO,CAAC,cAAc,CAAQ;gBAElB,MAAM,EAAE,MAAM,EAAE,cAAc,EAAE,MAAM;CAMrD"}
