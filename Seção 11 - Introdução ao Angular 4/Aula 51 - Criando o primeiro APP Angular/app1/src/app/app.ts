@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { TopoComponent } from './topo/topo.component';
 import { Painel } from './painel/painel';
 
@@ -7,9 +6,8 @@ import { Painel } from './painel/painel';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     TopoComponent,
-    Painel
+    Painel,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
