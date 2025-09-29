@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './tentativas.css'
 })
 export class Tentativas {
-
+    public coracaoVazio: string = '🤍'
+    public coracaoCheio: string = '❤️'
 }
