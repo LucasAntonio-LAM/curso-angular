@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './progresso.css'
 })
 export class Progresso {
-
+  public progresso: number = 75
 }

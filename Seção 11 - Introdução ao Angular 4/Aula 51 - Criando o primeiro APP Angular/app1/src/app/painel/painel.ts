@@ -19,6 +19,8 @@ export class Painel {
   public rodada: number = 0
   public rodadaFrase: Frase
 
+  public progresso: number = 0
+
   constructor() {
     this.rodadaFrase = this.frases[this.rodada]
     console.log(this.rodadaFrase)
@@ -33,7 +35,13 @@ export class Painel {
 
     if(this.rodadaFrase.frasePtBr == this.resposta) {
       alert('A tradução está correta')
+
+        // Trocar pergunta da rodada
         this.rodada++
+
+        // Atualizar a barra de progresso
+        this.progresso = this.progresso + (100 / this.frases.length)
+        console.log(this.progresso)
 
         // Atualiza o objeto rodadaFrase
         this.rodadaFrase = this.frases[this.rodada]
