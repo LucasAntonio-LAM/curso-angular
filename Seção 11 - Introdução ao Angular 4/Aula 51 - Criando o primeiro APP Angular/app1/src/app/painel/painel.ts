@@ -30,6 +30,15 @@ export class Painel {
   }
 
   public verificarResposta(): void {
-    console.log('Verificar resposta', this.resposta)
+
+    if(this.rodadaFrase.frasePtBr == this.resposta) {
+      alert('A tradução está correta')
+        this.rodada++
+
+        // Atualiza o objeto rodadaFrase
+        this.rodadaFrase = this.frases[this.rodada]
+    } else {
+      alert('A tradução está errada')
+    }
   }
 }
