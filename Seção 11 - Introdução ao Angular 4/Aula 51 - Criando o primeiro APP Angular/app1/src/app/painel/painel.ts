@@ -18,6 +18,10 @@ export class Painel {
 
   public atualizaResposta(resposta: Event): void {
     this.resposta = (<HTMLInputElement>resposta.target).value
-    console.log(this.resposta)
+    //console.log(this.resposta)
+  }
+
+  public verificarResposta(): void {
+    console.log('Verificar resposta', this.resposta)
   }
 }
