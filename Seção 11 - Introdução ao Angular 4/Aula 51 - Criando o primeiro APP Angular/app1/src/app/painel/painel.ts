@@ -14,8 +14,10 @@ import { FRASES } from './frases-mock';
 export class Painel {
   public frases: Frase[] = FRASES
   public instrucao: string = 'Traduza a frase:'
+  public resposta: string = ''
 
-  public atualizaResposta(): void {
-    console.log('teste')
+  public atualizaResposta(resposta: Event): void {
+    this.resposta = (<HTMLInputElement>resposta.target).value
+    console.log(this.resposta)
   }
 }
