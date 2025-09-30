@@ -17,13 +17,12 @@ export class Painel {
   public resposta: string = ''
 
   public rodada: number = 0
-  public rodadaFrase: Frase
+  public rodadaFrase!: Frase
 
   public progresso: number = 0
 
   constructor() {
-    this.rodadaFrase = this.frases[this.rodada]
-    console.log(this.rodadaFrase)
+    this.atualizaRodada()
   }
 
   public atualizaResposta(resposta: Event): void {
@@ -43,10 +42,20 @@ export class Painel {
         this.progresso = this.progresso + (100 / this.frases.length)
         console.log(this.progresso)
 
-        // Atualiza o objeto rodadaFrase
-        this.rodadaFrase = this.frases[this.rodada]
+        // Atualiza o objeto rodadaFrase e limpar a resposta
+        this.atualizaRodada()
+
     } else {
       alert('A tradução está errada')
     }
+  }
+
+  public atualizaRodada(): void {
+
+    // Define a frase da rodada com base me alguma logica
+    this.rodadaFrase = this.frases[this.rodada]
+
+    // Limpar a resposta
+    this.resposta = ''
   }
 }
