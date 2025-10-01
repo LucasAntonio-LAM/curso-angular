@@ -21,6 +21,13 @@ export class Tentativas {
     }
 
     ngOnChanges() {
+      // This.tentativas
+      // this.coracoes.length
+
+      if(this.tentativas !== this.coracoes.length) {
+        let indice = this.coracoes.length - this.tentativas
+        this.coracoes[indice - 1].cheio = false
+      }
       console.log('Tentativas recebidas do painel: ', this.tentativas)
     }
 
