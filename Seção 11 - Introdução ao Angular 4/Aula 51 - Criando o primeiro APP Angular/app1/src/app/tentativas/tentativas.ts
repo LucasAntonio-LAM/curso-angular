@@ -18,6 +18,6 @@ export class Tentativas {
     ]
 
     constructor() {
-      console.log(this.coracoes)
+      
     }
 }
