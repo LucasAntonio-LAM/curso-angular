@@ -33,7 +33,6 @@ export class Painel {
   }
 
   public verificarResposta(): void {
-    console.log(this.tentativas)
     if(this.rodadaFrase.frasePtBr == this.resposta) {
       alert('A tradução está correta')
 
@@ -55,7 +54,6 @@ export class Painel {
         alert('Você perdeu todas as tentativas!')
       }
     }
-    console.log(this.tentativas)
   }
 
   public atualizaRodada(): void {

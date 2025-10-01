@@ -20,8 +20,12 @@ export class Tentativas {
       
     }
 
-    ngOnInit() {
+    ngOnChanges() {
       console.log('Tentativas recebidas do painel: ', this.tentativas)
+    }
+
+    ngOnInit() {
+      
     }
     
 }
