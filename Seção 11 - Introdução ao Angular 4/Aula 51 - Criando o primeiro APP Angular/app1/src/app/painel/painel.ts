@@ -34,14 +34,16 @@ export class Painel {
 
   public verificarResposta(): void {
     if(this.rodadaFrase.frasePtBr == this.resposta) {
-      alert('A tradução está correta')
-
         // Trocar pergunta da rodada
         this.rodada++
 
         // Atualizar a barra de progresso
         this.progresso = this.progresso + (100 / this.frases.length)
-        console.log(this.progresso)
+
+        //
+        if(this.rodada === 4) {
+          alert('Você concluiu as traduções com sucesso!')
+        }
 
         // Atualiza o objeto rodadaFrase e limpar a resposta
         this.atualizaRodada()
