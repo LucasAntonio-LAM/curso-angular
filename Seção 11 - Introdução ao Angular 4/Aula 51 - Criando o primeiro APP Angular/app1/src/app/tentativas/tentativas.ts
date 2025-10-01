@@ -23,4 +23,5 @@ export class Tentativas {
     ngOnInit() {
       console.log('Tentativas recebidas do painel: ', this.tentativas)
     }
+    
 }
