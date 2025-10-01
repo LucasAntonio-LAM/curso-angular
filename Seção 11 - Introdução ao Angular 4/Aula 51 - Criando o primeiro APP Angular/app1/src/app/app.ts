@@ -13,5 +13,9 @@ import { Painel } from './painel/painel';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('app1');
+  
+
+  public encerrarJogo(tipo: string): void {
+    console.log(tipo)
+  }
 }

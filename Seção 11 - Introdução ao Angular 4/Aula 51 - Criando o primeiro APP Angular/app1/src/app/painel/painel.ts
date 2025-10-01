@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Progresso } from '../progresso/progresso';
 import { Tentativas } from '../tentativas/tentativas';
 import { Frase } from '../shared/frase.model';
@@ -23,6 +23,8 @@ export class Painel {
 
   public tentativas: number = 3
 
+  @Output() public encerrarJogo: EventEmitter<string> = new EventEmitter()
+
   constructor() {
     this.atualizaRodada()
   }
@@ -42,7 +44,7 @@ export class Painel {
 
         //
         if(this.rodada === 4) {
-          alert('Você concluiu as traduções com sucesso!')
+          this.encerrarJogo.emit('vitoria')
         }
 
         // Atualiza o objeto rodadaFrase e limpar a resposta
@@ -53,7 +55,7 @@ export class Painel {
       this.tentativas--
 
       if(this.tentativas === -1) {
-        alert('Você perdeu todas as tentativas!')
+        this.encerrarJogo.emit('derrota')
       }
     }
   }
