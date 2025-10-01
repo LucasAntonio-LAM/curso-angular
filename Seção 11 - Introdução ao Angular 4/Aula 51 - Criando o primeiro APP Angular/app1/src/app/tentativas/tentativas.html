@@ -1,5 +1,11 @@
+<!--
 <div class="heart d-flex">
     <p>{{coracaoCheio}}</p>
     <p>{{coracaoCheio}}</p>
     <p>{{coracaoCheio}}</p>
+</div>
+-->
+
+<div class="d-flex">
+    <p *ngFor="let coracao of coracoes">{{coracao.exibeCoracao()}}</p>
 </div>

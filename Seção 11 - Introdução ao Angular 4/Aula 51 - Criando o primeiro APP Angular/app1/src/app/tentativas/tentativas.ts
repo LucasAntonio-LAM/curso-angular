@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Coracao } from '../shared/coracao.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tentativas',
-  imports: [],
+  imports: [CommonModule],
   standalone: true,
   templateUrl: './tentativas.html',
   styleUrl: './tentativas.css'
