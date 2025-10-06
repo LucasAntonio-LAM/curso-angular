@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { TopoComponent } from './topo/topo.component';
 import { Painel } from './painel/painel';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +9,17 @@ import { Painel } from './painel/painel';
   imports: [
     TopoComponent,
     Painel,
+    CommonModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   
+  public jogoEmAndamento: boolean = true
 
   public encerrarJogo(tipo: string): void {
     console.log(tipo)
+    this.jogoEmAndamento = false
   }
 }

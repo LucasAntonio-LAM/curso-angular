@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, OnDestroy } from '@angular/core';
 import { Progresso } from '../progresso/progresso';
 import { Tentativas } from '../tentativas/tentativas';
 import { Frase } from '../shared/frase.model';
@@ -27,6 +27,10 @@ export class Painel {
 
   constructor() {
     this.atualizaRodada()
+  }
+
+  ngOnDestroy() {
+    console.log('Componente painel foi destrúido')
   }
 
   public atualizaResposta(resposta: Event): void {
