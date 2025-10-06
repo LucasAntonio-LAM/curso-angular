@@ -17,9 +17,10 @@ import { CommonModule } from '@angular/common';
 export class App {
   
   public jogoEmAndamento: boolean = true
+  public tipoEncerramento!: string
 
   public encerrarJogo(tipo: string): void {
-    console.log(tipo)
     this.jogoEmAndamento = false
+    this.tipoEncerramento = tipo
   }
 }
