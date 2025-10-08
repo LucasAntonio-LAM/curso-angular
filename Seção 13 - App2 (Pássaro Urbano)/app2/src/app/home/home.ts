@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   providers: [OfertasService],
   templateUrl: './home.html',
   styleUrl: './home.css'
@@ -18,6 +19,6 @@ export class Home {
 
   ngOnInit() {
     this.ofertas = this.ofertasService.getOfertas()
-    console.log(this.ofertas)
+    //console.log(this.ofertas)
   }
 }
