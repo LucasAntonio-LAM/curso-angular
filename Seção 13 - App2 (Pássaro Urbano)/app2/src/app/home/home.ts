@@ -22,8 +22,9 @@ export class Home {
     //console.log(this.ofertas)
 
     this.ofertasService.getOfertas2()
-      .then(( ofertas: Oferta[] ) => {
-        this.ofertas = ofertas
-      })
+      .then(( ofertas: Oferta[] ) => this.ofertas = ofertas,
+      ( param: any ) => console.log(param)
+    )
+
   }
 }

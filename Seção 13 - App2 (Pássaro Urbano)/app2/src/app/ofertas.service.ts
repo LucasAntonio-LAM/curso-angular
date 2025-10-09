@@ -62,7 +62,14 @@ export class OfertasService {
 		return new Promise((resolve, reject) => {
 			// Algum tipo de processamento, que ao finalizar, chama a função resolve ou reject
 			console.log('Sera que passou por aqui?')
-			resolve( this.ofertas )
+			let deu_certo = false
+			if(deu_certo) {
+				resolve( this.ofertas )
+			} else {
+				reject({ codigo_erro: 404, mensagem_erro: 'Servidor não encontrado' })
+			}
+			
+			
 		})
 	}
 }
