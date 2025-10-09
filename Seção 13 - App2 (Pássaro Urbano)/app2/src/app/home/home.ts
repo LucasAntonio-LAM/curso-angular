@@ -18,7 +18,12 @@ export class Home {
   }
 
   ngOnInit() {
-    this.ofertas = this.ofertasService.getOfertas()
+    //this.ofertas = this.ofertasService.getOfertas()
     //console.log(this.ofertas)
+
+    this.ofertasService.getOfertas2()
+      .then(( ofertas: Oferta[] ) => {
+        this.ofertas = ofertas
+      })
   }
 }
