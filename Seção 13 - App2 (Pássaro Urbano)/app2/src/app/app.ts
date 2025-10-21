@@ -19,7 +19,7 @@ import { DiversaoComponent } from './diversao-component/diversao-component';
     HttpClient
   ],
   selector: 'app-root',
-  imports: [Home, Topo, Rodape, RestaurantesComponent, DiversaoComponent, RouterOutlet],
+  imports: [Topo, Rodape, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
