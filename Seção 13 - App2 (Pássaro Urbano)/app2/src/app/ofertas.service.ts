@@ -25,6 +25,10 @@ export class OfertasService {
 			.then((resposta: any) => resposta)
 	}
 
+	public getDiversaoPorCategoria(categoria: string): Promise<Oferta[]> {
+		return firstValueFrom(this.http.get(`http://localhost:3000/ofertas?categoria=${categoria}`))
+			.then((resposta: any) => resposta)
+	}
 }
 // 	public getOfertas2(): Promise<Array<Oferta>> {
 // 		return new Promise((resolve, reject) => {
