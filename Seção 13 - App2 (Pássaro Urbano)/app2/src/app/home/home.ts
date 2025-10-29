@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   providers: [OfertasService],
   templateUrl: './home.html',
   styleUrl: './home.css'

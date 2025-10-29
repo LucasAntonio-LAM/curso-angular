@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 import { Oferta } from '../shared/oferta.model';
 import { OfertasService } from '../ofertas.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-diversao',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './diversao-component.html',
   styleUrl: './diversao-component.css',
   providers: [ OfertasService ]
