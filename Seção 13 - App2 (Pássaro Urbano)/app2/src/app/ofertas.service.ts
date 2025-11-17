@@ -3,10 +3,14 @@ import { Injectable } from "@angular/core"
 import { HttpClient } from "@angular/common/http"
 import { firstValueFrom } from "rxjs"
 
+import { URL_API } from "./app.api"
 
 
 @Injectable({providedIn: 'root'})
 export class OfertasService {
+
+
+	private url_api = 'http://localhost:3000/ofertas'
 
 	constructor(private http: HttpClient) {
 
@@ -14,24 +18,24 @@ export class OfertasService {
 
     public getOfertas(): Promise<Oferta[]> {
         // Efetuar requisição HTTP 
-		return firstValueFrom(this.http.get('http://localhost:3000/ofertas?destaque=true'))
+		return firstValueFrom(this.http.get(`${URL_API}?destaque=true`))
 			.then((resposta: any) => resposta)
 			
 		// e retornar um promise Oferta[]
     }
 
 	public getOfertasPorCategoria(categoria: string) : Promise<Oferta[]> {
-		return firstValueFrom(this.http.get(`http://localhost:3000/ofertas?categoria=${categoria}`))
+		return firstValueFrom(this.http.get(`${URL_API}?categoria=${categoria}`))
 			.then((resposta: any) => resposta)
 	}
 
 	public getDiversaoPorCategoria(categoria: string): Promise<Oferta[]> {
-		return firstValueFrom(this.http.get(`http://localhost:3000/ofertas?categoria=${categoria}`))
+		return firstValueFrom(this.http.get(`${URL_API}?categoria=${categoria}`))
 			.then((resposta: any) => resposta)
 	}
 
 	public getOfertaPorId(id: number): Promise<Oferta> {
-		return firstValueFrom(this.http.get(`http://localhost:3000/ofertas?id=${id}`))
+		return firstValueFrom(this.http.get(`${URL_API}?id=${id}`))
 			.then((resposta: any) => resposta.shift())
 	}
 }
