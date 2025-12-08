@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 import { CommonModule } from '@angular/common';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-oferta-component',
@@ -25,7 +26,14 @@ export class OfertaComponent {
       .then((oferta: Oferta) => {
         this.oferta = oferta
       })
-      
+    
+    // this.route.params.subscribe((parametro: any) => console.log(parametro), ((error: any) => console.log(error)), (() => console.log('Processamento foi classificado como concluído!')))
+     
+    // this.route.params.subscribe((parametro: any) => {
+    //   console.log(parametro)},
+    //   (erro: any) => console.log(erro),
+    //   () => console.log('Processamento foi classificado como concluído!')
+    // )
     //console.log('ID recuperado na rota:', this.route.snapshot.params['id'])
     // this.route.params.subscribe((parametro) => {
     //   console.log(parametro, id)
