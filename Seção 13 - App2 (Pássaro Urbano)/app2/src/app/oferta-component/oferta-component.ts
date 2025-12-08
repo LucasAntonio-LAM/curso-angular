@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 import { CommonModule } from '@angular/common';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Observer, Subscription } from 'rxjs';
 import { interval } from 'rxjs';
 
 @Component({
@@ -39,9 +39,18 @@ export class OfertaComponent {
     // this.route.params.subscribe((parametro) => {
     //   console.log(parametro, id)
     // })
-    let tempo = interval(2000)
-      tempo.subscribe((intervalo: number) => {
-        console.log(intervalo)
+    // let tempo = interval(2000)
+    //   tempo.subscribe((intervalo: number) => {
+    //     console.log(intervalo)
+    //   })
+
+    //Observable (Observável)
+      let meuObsesrvableTeste = new Observable((observer: Observer<number>) => {
+        observer.next(1),
+        observer.next(3)
       })
+
+    //Observable (Observador)
+    meuObsesrvableTeste.subscribe((parametro: number) => console.log(parametro + 10))
   }
 }
