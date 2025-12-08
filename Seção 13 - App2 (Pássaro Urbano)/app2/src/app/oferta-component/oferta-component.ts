@@ -47,10 +47,15 @@ export class OfertaComponent {
     //Observable (Observável)
       let meuObsesrvableTeste = new Observable((observer: Observer<number>) => {
         observer.next(1),
-        observer.next(3)
+        observer.next(3),
+        observer.complete()
       })
 
     //Observable (Observador)
-    meuObsesrvableTeste.subscribe((parametro: number) => console.log(parametro + 10))
+    meuObsesrvableTeste.subscribe({
+      next: (resultado: number) => console.log(resultado + 10),
+      error: (erro: string) => console.log(erro),
+      complete: () => console.log('Stream de eventos foi finalizada!')
+    })
   }
 }
