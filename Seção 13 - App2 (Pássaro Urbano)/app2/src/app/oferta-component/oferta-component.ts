@@ -4,7 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-oferta-component',
@@ -38,5 +39,9 @@ export class OfertaComponent {
     // this.route.params.subscribe((parametro) => {
     //   console.log(parametro, id)
     // })
+    let tempo = interval(2000)
+      tempo.subscribe((intervalo: number) => {
+        console.log(intervalo)
+      })
   }
 }
