@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { OfertasService } from '../ofertas.service';
@@ -15,6 +15,9 @@ import { interval } from 'rxjs';
   providers: [ OfertasService ]
 })
 export class OfertaComponent {
+
+  private tempoObeservableSubscription!: Subscription
+  private meuObservableTesteSubscription!: Subscription
 
   public oferta!: Oferta
   
@@ -39,10 +42,10 @@ export class OfertaComponent {
     // this.route.params.subscribe((parametro) => {
     //   console.log(parametro, id)
     // })
-    // let tempo = interval(2000)
-    //   tempo.subscribe((intervalo: number) => {
-    //     console.log(intervalo)
-    //   })
+      let tempo = interval(2000)
+        this.tempoObeservableSubscription = tempo.subscribe((intervalo: number) => {
+        console.log(intervalo)
+      })
 
     //Observable (Observável)
       let meuObsesrvableTeste = new Observable((observer: Observer<number>) => {
@@ -52,10 +55,15 @@ export class OfertaComponent {
       })
 
     //Observable (Observador)
-    meuObsesrvableTeste.subscribe({
+    this.meuObservableTesteSubscription = meuObsesrvableTeste.subscribe({
       next: (resultado: number) => console.log(resultado + 10),
       error: (erro: string) => console.log(erro),
       complete: () => console.log('Stream de eventos foi finalizada!')
     })
+  }
+
+  ngOnDestroy() {
+    this.meuObservableTesteSubscription.unsubscribe()
+    this.tempoObeservableSubscription.unsubscribe()
   }
 }
