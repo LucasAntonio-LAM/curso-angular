@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 })
 export class Topo {
 
-  public pesquisa(event: Event): void {
-    console.log((<HTMLInputElement>event.target).value)
+  public pesquisa(termoDaBusca: String): void {
+    console.log(termoDaBusca)
   }
 }
